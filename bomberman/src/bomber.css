@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+@font-face {
+    font-family: neon;
+    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+    background-color: hsl(340, 30%, 90%);
+}
+
+.container-main {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-heading {
+    font-family: neon, serif;
+    color: #FB4264;
+    text-shadow: 0 0 3vw #F40A35;
+    font-size: 6rem;
+}
+
+/* this animation causes frame drops */
+/* .neon {
+    animation: neon 4s ease infinite;
+} */
+
+@keyframes neon {
+    0%,
+    100% {
+        text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+        color: #FED128;
+    }
+    50% {
+        text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+        color: #806914;
+    }
+}
+
+.timer {
+    margin-bottom: 2rem;
+}
+
+.field {
+    flex-grow: 0;
+    background-color: black;
+}
+
+.flex {
+    display: flex;
+}
+
+.wall {
+    background-color: black;
+}
+
+/* img.exploding {
+    background-image: url("../assets/images/explosion.png");
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+} */
+
+.box {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.bomberman,
+.enemy,
+.bomb {
+    position: absolute;
+    background-size: 100% 100%;
+    z-index: 4;
+}
+
+.bomberman {
+    /* background-color: aquamarine; */
+    background-size: 420px 240px;
+    z-index: 5;
+}
+
+.enemy {
+    /* background-color: pink; */
+    background-size: 180px 240px;
+    z-index: 6;
+}
+
+.bomb {
+    background-image: url("../assets/images/bomb.svg");
+}
+
+div.spawn {
+    background-image: url("../assets/images/hole.png");
+    background-size: 60px;
+    z-index: 1;
+}
+
+.stats__column {
+    width: 30rem;
+    height: 30rem;
+}
+
+.container-pause {
+    display: none;
+}
+
+.container-pause__active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 3rem;
+
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 2.5rem;
+    z-index: 100;
+}
+
+.main-instructions {
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+}
+
+.container-stats {
+    display: flex;
+    gap: 10rem;
+    position: absolute;
+    top: 2rem;
+}
