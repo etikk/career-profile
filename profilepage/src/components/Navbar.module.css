@@ -1,0 +1,32 @@
+.pages {
+    height: 6rem; /* 100% Full-height */
+    width: 100%; /* 0 width - change this with JavaScript */
+    position: absolute;
+    top: 0;
+    background-color: black;
+
+    /* display items horizontally next to each other */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pages ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pages li {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.pages a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
