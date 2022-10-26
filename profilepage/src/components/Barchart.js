@@ -101,6 +101,7 @@ export default function Barchart(props) {
   } else {
     return (
       <div className={classes.barchart}>
+        <p>Data fetched from kood/Jõhvi server with graphql query.</p>
         <Bar options={options} data={chartData} />
       </div>
     );

@@ -3,5 +3,19 @@
 }
 
 .fetched {
-    color: blue;
+    background-color: rgb(220, 249, 0);
+    padding: 0 0.2rem;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .profile {
+        padding-top: 11rem;
+    }
 }

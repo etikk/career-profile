@@ -1,9 +1,9 @@
-.home {
+.cv {
     padding-top: 8rem;
 }
 
 @media only screen and (max-width: 1000px) {
-    .home {
-        padding-top: 10rem;
+    .cv {
+        padding-top: 11rem;
     }
 }

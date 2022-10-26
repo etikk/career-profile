@@ -9,7 +9,7 @@ export async function getProfileData(fetchOffset = 0, prevData = []) {
       user (where: {id: {_eq: 290}}) {
         id
         login
-        transactions (where: {type: {_in: ["up", "down"]}}, , offset:${fetchOffset} limit:20 order_by:{createdAt: asc}) {
+        transactions (where: {type: {_in: ["up", "down", "xp"]}}, , offset:${fetchOffset} limit:50 order_by:{createdAt: asc}) {
           createdAt
           type
           path
@@ -33,8 +33,8 @@ export async function getProfileData(fetchOffset = 0, prevData = []) {
         transactionData.push(element);
       });
 
-      if (data.data.user[0].transactions.length === 20) {
-        getProfileData(fetchOffset + 20, transactionData);
+      if (data.data.user[0].transactions.length === 50) {
+        getProfileData(fetchOffset + 50, transactionData);
       }
     });
   returnData.push(transactionData);
@@ -53,36 +53,69 @@ export default function Profile(props) {
   } else {
     return (
       <div className={classes.profile}>
-        <div>
-          Student name: <b>Erkki Tikk</b>
-        </div>
-        <div>
-          Student age: <b>39</b>
-        </div>
-        <div>
-          Resides in: <b>Tartu, Estonia</b>
-        </div>
-        <div>
-          User id nr: <b className={classes.fetched}>{fetchData[1]}</b>
-        </div>
-        <div>
-          Username: <b className={classes.fetched}>{fetchData[2]}</b>
-        </div>
-        <div>
-          Number of received audits:{" "}
-          <b className={classes.fetched}>
-            {fetchData[0].filter((element) => element.type === "down").length}
-          </b>
-        </div>
-        <div>
-          Number of outgoing audits:{" "}
-          <b className={classes.fetched}>
-            {fetchData[0].filter((element) => element.type === "up").length}
-          </b>
-          <br></br>
-          <p className={classes.fetched}>
-            NB! Blue fields are fetched using a recursive, nested, filtered graphql query.
-          </p>
+        <p>
+          <b className={classes.fetched}>Data</b> fetched from kood/Jõhvi server with
+          graphql query.
+        </p>
+        <div className={classes.table}>
+          <table>
+            <tr>
+              <td>Student name:</td>
+              <td>
+                <b>Erkki Tikk</b>
+              </td>
+            </tr>
+            <tr>
+              <td>Student age:</td>
+              <td>
+                <b>39</b>
+              </td>
+            </tr>
+            <tr>
+              <td>Resides in:</td>
+              <td>
+                <b>Tartu, Estonia</b>
+              </td>
+            </tr>
+            <tr>
+              <td>User id nr:</td>
+              <td>
+                <b className={classes.fetched}>{fetchData[1]}</b>
+              </td>
+            </tr>
+            <tr>
+              <td>Username:</td>
+              <td>
+                <b className={classes.fetched}>{fetchData[2]}</b>
+              </td>
+            </tr>
+            <tr>
+              <td>Number of received audits: </td>
+              <td>
+                <b className={classes.fetched}>
+                  {fetchData[0].filter((element) => element.type === "down").length}
+                </b>
+              </td>
+            </tr>
+            <tr>
+              <td>Number of performed audits: </td>
+              <td>
+                <b className={classes.fetched}>
+                  {fetchData[0].filter((element) => element.type === "up").length}
+                </b>
+              </td>
+            </tr>
+            <tr>
+              <td>Total number of coding tasks completed: </td>
+              <td>
+                <b className={classes.fetched}>
+                  {fetchData[0].filter((element) => element.type === "up").length +
+                    fetchData[0].filter((element) => element.type === "down").length / 5 +
+                    fetchData[0].filter((element) => element.type === "xp").length}
+                </b>
+              </td>
+            </tr>
+          </table>
         </div>
       </div>
     );

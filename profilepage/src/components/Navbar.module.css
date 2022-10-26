@@ -1,16 +1,13 @@
 .pages {
-    height: 6rem; /* 100% Full-height */
-    width: 100%; /* 0 width - change this with JavaScript */
-    position: absolute;
+    height: 6rem;
+    width: 100%;
+    position: fixed;
     top: 0;
     background-color: black;
-
-    /* display items horizontally next to each other */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
 }
 
 .pages ul {
@@ -27,6 +24,37 @@
 
 .pages a {
     color: white;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
+}
+
+.pages li a:hover {
+    padding-bottom: 1rem;
+    color: rgb(220, 249, 0);
+    transition: color 0.5s ease;
+}
+
+@media only screen and (max-width: 1000px) {
+    .pages {
+      background-color: black;
+      height: 10rem;
+      justify-content: left;
+    }
+    
+    .pages ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pages li {
+        align-self: flex-start;
+        padding-left: 0;
+        padding-right: 2rem;
+    }
+
+    .pages li a:hover {
+        padding-left: 1rem;
+        transition: padding-left 0.5s ease;
+    }
 }

@@ -262,6 +262,7 @@ export default function Linechart(props) {
   } else {
     return (
       <div className={classes.linechart}>
+        <p>Data fetched from kood/Jõhvi server with graphql query.</p>
         <Line options={options} data={setChartData(fetchData)} />
       </div>
     );

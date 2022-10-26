@@ -12,6 +12,9 @@ export default function Navbar() {
             <Link to="/">erkki.tikk@kood/Jõhvi</Link>
           </li>
           <li>
+            <Link to="/cv">CV</Link>
+          </li>
+          <li>
             <Link to="/profile">Profile</Link>
           </li>
           <li>

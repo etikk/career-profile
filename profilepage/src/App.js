@@ -9,6 +9,7 @@ import { getBarchartData } from "./components/Barchart";
 import Linechart from "./components/Linechart.js";
 import { getLinechartData } from "./components/Linechart.js";
 import { getProfileData } from "./components/Profile";
+import Cv from "./components/Cv";
 import Home from "./components/Home";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
+        <Route path="/cv" element={<Cv />} />
         <Route path="/profile" element={<Profile profileData={getProfileData()} />} />
         <Route path="/barchart" element={<Barchart barData={getBarchartData()} />} />
         <Route path="/linechart" element={<Linechart lineData={getLinechartData()} />} />
