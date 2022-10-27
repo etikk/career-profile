@@ -111,7 +111,7 @@ export default function Cv() {
           </tr>
           <tr>
             <td>2022</td>
-            <td>Awarded military rank: Second Liutenant (OF-1)</td>
+            <td>Awarded military rank: Second Lieutenant (OF-1)</td>
           </tr>
           <tr>
             <td>2021 - Present</td>
@@ -124,6 +124,10 @@ export default function Cv() {
           <tr>
             <td>2018</td>
             <td>Garage48 Defence Makeathon prototyping team leader</td>
+          </tr>
+          <tr>
+            <td>2017</td>
+            <td>Chartered Architect licence, level 7</td>
           </tr>
           <tr>
             <td>2017</td>
