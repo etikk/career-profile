@@ -7,7 +7,7 @@
     background-color: black;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -19,8 +19,8 @@
 }
 
 .pages li {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
 }
 
 .pages a {
@@ -34,14 +34,22 @@
     transition: color 0.5s ease;
 }
 
+.logo {
+    margin: auto 1.5rem auto 0;
+}
+
+.logo img {
+    width: 200px;
+}
+
 @media only screen and (max-width: 1000px) {
     .pages {
       background-color: black;
       height: 10rem;
-      justify-content: left;
     }
     
     .pages ul {
+        justify-content: left;
         list-style: none;
         display: flex;
         flex-direction: column;
@@ -56,5 +64,9 @@
     .pages li a:hover {
         padding-left: 1rem;
         transition: padding-left 0.5s ease;
+    }
+
+    .logo {
+        justify-content: right;
     }
 }

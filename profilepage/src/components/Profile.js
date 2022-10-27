@@ -73,9 +73,15 @@ export default function Profile(props) {
                 </td>
               </tr>
               <tr>
-                <td>Resides in:</td>
+                <td>At kood/Jõhvi since:</td>
                 <td>
-                  <b>Tartu, Estonia</b>
+                  <b>08.2021</b>
+                </td>
+              </tr>
+              <tr>
+                <td>Tech stack:</td>
+                <td>
+                  <b>JS, TS, React, Sqlite, Go, Rust</b>
                 </td>
               </tr>
               <tr>

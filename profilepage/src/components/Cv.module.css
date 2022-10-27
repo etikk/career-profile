@@ -13,6 +13,21 @@
 .image {
     width: 200px;
     height: 200px;
+    margin-top: 2rem;
+}
+
+td {
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+td a {
+    text-decoration: none;
+    color: black;
+}
+
+tr {
+    background-color: azure;
 }
 
 @media only screen and (max-width: 1000px) {

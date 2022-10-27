@@ -1,6 +1,7 @@
 // import { Link } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 // import {Fragment} from "react";
+import logo from "../assets/KOOD_Logo_RGB-06.png";
 
 import classes from "./Navbar.module.css";
 
@@ -71,6 +72,11 @@ export default function Navbar() {
             </NavLink>
           </li>
         </ul>
+        <div className={classes.logo}>
+          <a href="https://kood.tech/">
+            <img src={logo} alt="kood/Jõhvi logo" />
+          </a>
+        </div>
       </nav>
     </div>
   );
