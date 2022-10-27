@@ -4,14 +4,25 @@
     align-items: center;
     justify-content: center;
     margin-top: 7rem;
-    max-width: 1000px;
+    max-width: 40rem;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+    margin-top: 2rem;
 }
 
 @media only screen and (max-width: 1000px) {
     .home {
         margin-top: 11rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .home {
+        max-width: 30rem;
     }
 }

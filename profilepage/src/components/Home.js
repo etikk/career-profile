@@ -1,17 +1,31 @@
 import classes from "./Home.module.css";
+import face from "../assets/Erkki_Tikk_rnd.png";
 
 export default function Home() {
   return (
     <div className={classes.home}>
+      <img className={classes.image} src={face} alt="Erkki Tikk" />
       <h1>Welcome to my kood/Jõhvi profile page!</h1>
-      <br></br>
-      <p>This page was created as a part of the kood/Jõhvi div-01 "graphql" task.</p>
-      <p>The object of the task was to make qraphql queries to the school API</p>
-      <p>and present the data as fields in the profile section and two graphs.</p>
-      <br></br>
       <p>
-        The page uses a simple React base and the graphs are created using react-chart-js.
+        My name is <b>Erkki Tikk</b> and I am a former military architect reprofiling my
+        career into <b>software engineering</b>.
+        <br />
+        <br />
+        In the summer of 2021 I applied to and got accepted into the kood/Jõhvi edu-01
+        program and I haven't looked back since! What excites me in software engineering
+        is being at the forefront of modern tehnologies and all the puzzles I get to solve
+        in the process. I also enjoy learning new skills and value skill development
+        opportunities the most in a workplace.
       </p>
+      <p>
+        I would greatly appreciate an opportunity to work with you and your team and build
+        your business together!
+        <br />
+        Please take a look at my sample projects and CV and feel free to contact me
+        anytime.
+      </p>
+      <br />
+      <br />
     </div>
   );
 }
