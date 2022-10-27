@@ -59,62 +59,65 @@ export default function Profile(props) {
         </p>
         <div className={classes.table}>
           <table>
-            <tr>
-              <td>Student name:</td>
-              <td>
-                <b>Erkki Tikk</b>
-              </td>
-            </tr>
-            <tr>
-              <td>Student age:</td>
-              <td>
-                <b>39</b>
-              </td>
-            </tr>
-            <tr>
-              <td>Resides in:</td>
-              <td>
-                <b>Tartu, Estonia</b>
-              </td>
-            </tr>
-            <tr>
-              <td>User id nr:</td>
-              <td>
-                <b className={classes.fetched}>{fetchData[1]}</b>
-              </td>
-            </tr>
-            <tr>
-              <td>Username:</td>
-              <td>
-                <b className={classes.fetched}>{fetchData[2]}</b>
-              </td>
-            </tr>
-            <tr>
-              <td>Number of received audits: </td>
-              <td>
-                <b className={classes.fetched}>
-                  {fetchData[0].filter((element) => element.type === "down").length}
-                </b>
-              </td>
-            </tr>
-            <tr>
-              <td>Number of performed audits: </td>
-              <td>
-                <b className={classes.fetched}>
-                  {fetchData[0].filter((element) => element.type === "up").length}
-                </b>
-              </td>
-            </tr>
-            <tr>
-              <td>Total number of coding tasks completed: </td>
-              <td>
-                <b className={classes.fetched}>
-                  {fetchData[0].filter((element) => element.type === "up").length +
-                    fetchData[0].filter((element) => element.type === "down").length / 5 +
-                    fetchData[0].filter((element) => element.type === "xp").length}
-                </b>
-              </td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>Student name:</td>
+                <td>
+                  <b>Erkki Tikk</b>
+                </td>
+              </tr>
+              <tr>
+                <td>Student age:</td>
+                <td>
+                  <b>39</b>
+                </td>
+              </tr>
+              <tr>
+                <td>Resides in:</td>
+                <td>
+                  <b>Tartu, Estonia</b>
+                </td>
+              </tr>
+              <tr>
+                <td>User id nr:</td>
+                <td>
+                  <b className={classes.fetched}>{fetchData[1]}</b>
+                </td>
+              </tr>
+              <tr>
+                <td>Username:</td>
+                <td>
+                  <b className={classes.fetched}>{fetchData[2]}</b>
+                </td>
+              </tr>
+              <tr>
+                <td>Number of received audits: </td>
+                <td>
+                  <b className={classes.fetched}>
+                    {fetchData[0].filter((element) => element.type === "down").length}
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>Number of performed audits: </td>
+                <td>
+                  <b className={classes.fetched}>
+                    {fetchData[0].filter((element) => element.type === "up").length}
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>Total number of coding tasks completed: </td>
+                <td>
+                  <b className={classes.fetched}>
+                    {fetchData[0].filter((element) => element.type === "up").length +
+                      fetchData[0].filter((element) => element.type === "down").length /
+                        5 +
+                      fetchData[0].filter((element) => element.type === "xp").length}
+                  </b>
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>

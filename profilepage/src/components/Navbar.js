@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 // import {Fragment} from "react";
 
 import classes from "./Navbar.module.css";
@@ -9,19 +10,65 @@ export default function Navbar() {
       <nav className={classes.pages}>
         <ul>
           <li>
-            <Link to="/">erkki.tikk@kood/Jõhvi</Link>
+            <NavLink
+              style={({ isActive }) => ({
+                color: isActive ? "rgb(220, 249, 0)" : "white",
+              })}
+              to="/"
+              end
+            >
+              erkki.tikk@kood/Jõhvi
+            </NavLink>
           </li>
           <li>
-            <Link to="/cv">CV</Link>
+            <NavLink
+              style={({ isActive }) => ({
+                color: isActive ? "rgb(220, 249, 0)" : "white",
+              })}
+              to="/cv"
+            >
+              CV
+            </NavLink>
           </li>
           <li>
-            <Link to="/profile">Profile</Link>
+            <NavLink
+              style={({ isActive }) => ({
+                color: isActive ? "rgb(220, 249, 0)" : "white",
+              })}
+              to="/projects"
+            >
+              Projects
+            </NavLink>
           </li>
           <li>
-            <Link to="/barchart">Div-01 tasks</Link>
+            <NavLink
+              style={({ isActive }) => ({
+                color: isActive ? "rgb(220, 249, 0)" : "white",
+              })}
+              to="/profile"
+            >
+              Profile
+            </NavLink>
           </li>
           <li>
-            <Link to="/linechart">Levels by type</Link>
+            <NavLink
+              style={({ isActive }) => ({
+                color: isActive ? "rgb(220, 249, 0)" : "white",
+              })}
+              to="/barchart"
+            >
+              Div-01 tasks
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              style={({ isActive }) => ({
+                color: isActive ? "rgb(220, 249, 0)" : "white",
+              })}
+              to="/linechart"
+            >
+              Levels by type
+            </NavLink>
           </li>
         </ul>
       </nav>

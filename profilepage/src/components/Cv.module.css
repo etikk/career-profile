@@ -1,9 +1,22 @@
 .cv {
-    padding-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
 }
 
 @media only screen and (max-width: 1000px) {
     .cv {
-        padding-top: 11rem;
+        margin-top: 11rem;
     }
 }
