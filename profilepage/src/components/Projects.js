@@ -1,4 +1,6 @@
 import classes from "./Projects.module.css";
+import { Link } from "react-router-dom";
+import road from "../assets/road_intersection.exe";
 
 export default function Projects() {
   return (
@@ -49,8 +51,10 @@ export default function Projects() {
       </div>
       <div>
         <h1>Road intersection</h1>
-        {/* <a href="https://tikk-bomberman.netlify.app/src/">Link to hosted project</a>
-        <br /> */}
+        <Link to={road} target="_blank" download>
+          Link to Windows .exe build
+        </Link>
+        <br />
         <a href="https://github.com/etikk/career-profile/tree/main/road-intersection">
           Link to GitHub repository
         </a>
@@ -64,7 +68,8 @@ export default function Projects() {
           exceed 8 cars behind each traffic light. The most difficult part was writing an
           algorithm that avoided traffic jams by controlling the lights, no collisions
           were allowed. The code is "as-is" from the time-limited assignment and works
-          quite smoothly.{" "}
+          quite smoothly. <br />
+          Press ENTER to start the simulation.{" "}
         </p>
         <p>Tech stack: Rust, speedy2D</p>
       </div>
