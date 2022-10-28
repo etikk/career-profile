@@ -155,7 +155,7 @@ export default function Cv() {
           </tr>
           <tr>
             <td>2000</td>
-            <td>PADI Open Water Diver licence</td>
+            <td>PADI Advanced Open Water Diver licence</td>
           </tr>
         </tbody>
       </table>
