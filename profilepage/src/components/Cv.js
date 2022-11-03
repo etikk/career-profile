@@ -1,13 +1,18 @@
+import { Link } from "react-router-dom";
 import classes from "./Cv.module.css";
 import face from "../assets/Erkki_Tikk_rnd.png";
+import pdf from "../assets/Tikk_CV_2022.pdf";
 
 export default function Cv() {
   return (
     <div className={classes.cv}>
       <img className={classes.image} src={face} alt="Erkki Tikk" />
       <h1>Curriculum Vitae</h1>
-
+      <Link to={pdf} target="_blank" download>
+        Download CV .pdf here
+      </Link>
       <h2>Contact Information</h2>
+
       <table>
         <tbody>
           <tr>

@@ -10,6 +10,11 @@
     width: 80%;
 }
 
+.cv a {
+    text-decoration: none;
+    color: black;
+}
+
 .image {
     width: 200px;
     height: 200px;
